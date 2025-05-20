@@ -1,0 +1,139 @@
+/* Carousel */
+
+.scroller {
+    max-width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .scroller__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+    padding-bottom: 25px;
+  }
+  
+  .scroller__inner img {
+    height: 360px;
+    width: 270px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  }
+  
+  .scroller__inner img:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 4px 8px 0px rgb(0 0 0 / 22%);
+  }
+  
+  /* Image wrapper and title */
+  
+  .image-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+  
+    background-color: #FFF;
+    padding: 25px 22px 0px 22px;
+    height: 455px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 4px 8px 0px rgb(0 0 0 / 22%);
+  }
+  
+  .image-title {
+    color: var(--clr-osu-black);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'Permanent Marker', cursive;
+  }
+  
+  /* Second Page */
+  
+  #detail-page img {
+    height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .profile-page {
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  .profile-page button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .profile-page button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.05);
+  }
+  
+  /* General Styling */
+  
+  :root {
+    --clr-osu-orange: rgb(215, 63, 9);
+    --clr-osu-brown: rgb(152,106,76);
+    --clr-osu-white: white;
+    --clr-osu-black: black;
+  }
+  
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    background-image: url("images/Image 3.jpeg");
+    background-size: cover;
+    display: grid;
+    min-block-size: 100vh;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-family: 'Fascinate Inline', cursive;
+    text-align: center;
+    color: var(--clr-osu-brown);
+    margin-bottom: 2rem;
+  }
+  
+  /* Medium screen - shows 2 cards */
+  @media only screen and (max-width: 991px) {
+    .scroller {
+      max-width: 658px;
+    }
+  }
+  
+  /* Small screen - show 1 card */
+  @media only screen and (max-width: 767px) {
+    .scroller {
+      max-width: 326px;
+    }
+  }
+  
